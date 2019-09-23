@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+           <th>index</th>
+            <th>task</th>
+            <th>delete</th>
+            <th>update</th>
+            
+    </thead>
+    <tbody>
+        <tr *ngFor ='let n of arr,index as i'>
+            
+            <td>{{i+1}}</td>
+            <td>{{n.username}}</td>
+            <td><button type="button" class="btn btn-danger" (click)='delete(i)'>delete</button></td>
+            <td><button type="button" class="btn btn-warning" (click)='update(i)'>update</button></td>
+        </tr>
+        
+    </tbody>
+</table>
