@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="card col-md-6 mt-2 offset-3">
+            <div class="card-body">
+                <form action="" #loginform='ngForm'  (ngSubmit)='printValue(loginform)'>
+                    <legend class="text-center">add task</legend>
+                    <div class="form-group">
+                      <label for="username">task</label>
+                      <input type="email" name="username" id="username" class="form-control" placeholder="task" #username='ngModel' ngModel required minlength="5" email >
+                   
+                    </div>
+                    <div *ngIf='username.touched && username.invalid'>
+                        <div class="alert alert-danger" *ngIf='username.errors.required'>
+                            requried
+                        </div>
+                        
+                    </div>
+                    
+                    <div>
+    
+                    <button type="submit" class="btn btn-success"
+                    >submit</button>
+                </div>
+    
+    
+                </form>
+              
+      
+    
+            </div>
+    
+        </div>
+        <app-task [Detailss]='dat'></app-task>
+    
+    </div>
+
+    

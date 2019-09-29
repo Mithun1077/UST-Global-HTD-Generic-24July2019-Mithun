@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>index</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>email</th>
+            <th>website</th>
+            <th>address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let u of uses,index as i'>
+            <td>{{i+1}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.website}}</td>
+            <td >{{u.address.street}}
+                {{u.address.suite}}
+                {{u.address.city}}
+                {{u.address.zipcode}}
+
+            </td>
+            
+        </tr>
+      
+    
+    </tbody>
+</table>

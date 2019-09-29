@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>index</th>
+            <th>task</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let n of Detailss,index as i'>
+            <td>{{i+1}}</td>
+            <td>{{n.username}}</td>
+            <td><button type="submit" class="btn btn-danger" (click)='delete(i)'>delete</button></td>
+        </tr>
+       
+    </tbody>
+</table>
